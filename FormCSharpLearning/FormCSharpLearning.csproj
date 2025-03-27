@@ -67,6 +67,8 @@
     <Compile Include="Forms\FrmStrings.Designer.cs">
       <DependentUpon>FrmStrings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Numbers\NumbersController.cs" />
+    <Compile Include="Numbers\NumbersHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmMain.resx">

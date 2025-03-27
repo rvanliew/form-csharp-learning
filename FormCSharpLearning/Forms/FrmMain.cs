@@ -30,11 +30,6 @@ namespace FormCSharpLearning
             _frmNumericals.Show();
         }
 
-        private void ClearMainPanel()
-        {
-            panelMain.Controls.Clear();
-        }
-
         private void btnStrings_Click(object sender, EventArgs e)
         {
             _frmStrings = new FrmStrings()
@@ -48,6 +43,11 @@ namespace FormCSharpLearning
             ClearMainPanel();
             panelMain.Controls.Add(_frmStrings);
             _frmStrings.Show();
+        }
+
+        private void ClearMainPanel()
+        {
+            panelMain.Controls.Clear();
         }
     }
 }
