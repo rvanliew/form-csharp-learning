@@ -13,6 +13,25 @@ public class NumbersController
 
     public double Add(double valueOne, double valueTwo)
     {
-        return 0;
+        double total = valueOne + valueTwo;
+        return total;
+    }
+
+    public double Subtract(double valueOne, double valueTwo)
+    {
+        double total = valueOne - valueTwo;
+        return total;
+    }
+
+    public double Multiply(double valueOne, double valueTwo)
+    {
+        double total = valueOne * valueTwo;
+        return total;
+    }
+
+    public double Divide(double valueOne, double valueTwo)
+    {
+        double total = valueOne / valueTwo;
+        return total;
     }
 }

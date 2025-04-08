@@ -54,6 +54,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tbOutputDiv = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSubtract = new System.Windows.Forms.Button();
+            this.btnMultiply = new System.Windows.Forms.Button();
+            this.btnDivide = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,9 +162,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(152, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 13);
+            this.label5.Size = new System.Drawing.Size(12, 13);
             this.label5.TabIndex = 13;
-            this.label5.Text = "%";
+            this.label5.Text = "/";
             // 
             // tbDiv1
             // 
@@ -273,12 +282,101 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "=";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(403, 39);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 27;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnSubtract
+            // 
+            this.btnSubtract.Location = new System.Drawing.Point(403, 66);
+            this.btnSubtract.Name = "btnSubtract";
+            this.btnSubtract.Size = new System.Drawing.Size(75, 23);
+            this.btnSubtract.TabIndex = 28;
+            this.btnSubtract.Text = "Subtract";
+            this.btnSubtract.UseVisualStyleBackColor = true;
+            this.btnSubtract.Click += new System.EventHandler(this.btnSubtract_Click);
+            // 
+            // btnMultiply
+            // 
+            this.btnMultiply.Location = new System.Drawing.Point(403, 91);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(75, 23);
+            this.btnMultiply.TabIndex = 29;
+            this.btnMultiply.Text = "Multiply";
+            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            // 
+            // btnDivide
+            // 
+            this.btnDivide.Location = new System.Drawing.Point(403, 117);
+            this.btnDivide.Name = "btnDivide";
+            this.btnDivide.Size = new System.Drawing.Size(75, 23);
+            this.btnDivide.TabIndex = 30;
+            this.btnDivide.Text = "Divide";
+            this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(49, 161);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 31;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(155, 161);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 32;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(49, 187);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(206, 20);
+            this.textBox3.TabIndex = 33;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 164);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(36, 13);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Inputs";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(4, 190);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 13);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Output";
+            // 
             // FrmNumericals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 544);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDivide);
+            this.Controls.Add(this.btnMultiply);
+            this.Controls.Add(this.btnSubtract);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbOutputDiv);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.tbOutputMult);
@@ -342,5 +440,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbOutputDiv;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnSubtract;
+        private System.Windows.Forms.Button btnMultiply;
+        private System.Windows.Forms.Button btnDivide;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }
