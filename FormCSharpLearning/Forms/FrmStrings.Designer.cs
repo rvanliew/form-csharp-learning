@@ -39,15 +39,15 @@
             this.tbStringInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnConcatStrings = new System.Windows.Forms.Button();
+            this.tbConcatStringOutput = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbConcatInputTwo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tbConcatInputOne = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
-            this.tbConcatInputTwo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbConcatStringOutput = new System.Windows.Forms.TextBox();
-            this.btnConcatStrings = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnInterpolateString = new System.Windows.Forms.Button();
             this.tbInterpOutput = new System.Windows.Forms.TextBox();
@@ -58,12 +58,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tbLastName = new System.Windows.Forms.TextBox();
+            this.tbFullName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnGetLastName = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -181,6 +190,49 @@
             this.panel2.Size = new System.Drawing.Size(1148, 73);
             this.panel2.TabIndex = 4;
             // 
+            // btnConcatStrings
+            // 
+            this.btnConcatStrings.Location = new System.Drawing.Point(809, 37);
+            this.btnConcatStrings.Name = "btnConcatStrings";
+            this.btnConcatStrings.Size = new System.Drawing.Size(98, 23);
+            this.btnConcatStrings.TabIndex = 7;
+            this.btnConcatStrings.Text = "Concatenate";
+            this.btnConcatStrings.UseVisualStyleBackColor = true;
+            this.btnConcatStrings.Click += new System.EventHandler(this.btnConcatStrings_Click);
+            // 
+            // tbConcatStringOutput
+            // 
+            this.tbConcatStringOutput.Enabled = false;
+            this.tbConcatStringOutput.Location = new System.Drawing.Point(547, 38);
+            this.tbConcatStringOutput.Name = "tbConcatStringOutput";
+            this.tbConcatStringOutput.Size = new System.Drawing.Size(256, 20);
+            this.tbConcatStringOutput.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(437, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Concatenated String";
+            // 
+            // tbConcatInputTwo
+            // 
+            this.tbConcatInputTwo.Location = new System.Drawing.Point(305, 38);
+            this.tbConcatInputTwo.Name = "tbConcatInputTwo";
+            this.tbConcatInputTwo.Size = new System.Drawing.Size(100, 20);
+            this.tbConcatInputTwo.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(212, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "String Value Two";
+            // 
             // tbConcatInputOne
             // 
             this.tbConcatInputOne.Location = new System.Drawing.Point(106, 38);
@@ -217,49 +269,6 @@
             this.label28.Size = new System.Drawing.Size(227, 20);
             this.label28.TabIndex = 2;
             this.label28.Text = "C# Strings (Concatenation)";
-            // 
-            // tbConcatInputTwo
-            // 
-            this.tbConcatInputTwo.Location = new System.Drawing.Point(305, 38);
-            this.tbConcatInputTwo.Name = "tbConcatInputTwo";
-            this.tbConcatInputTwo.Size = new System.Drawing.Size(100, 20);
-            this.tbConcatInputTwo.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(212, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "String Value Two";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(437, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Concatenated String";
-            // 
-            // tbConcatStringOutput
-            // 
-            this.tbConcatStringOutput.Enabled = false;
-            this.tbConcatStringOutput.Location = new System.Drawing.Point(547, 38);
-            this.tbConcatStringOutput.Name = "tbConcatStringOutput";
-            this.tbConcatStringOutput.Size = new System.Drawing.Size(256, 20);
-            this.tbConcatStringOutput.TabIndex = 6;
-            // 
-            // btnConcatStrings
-            // 
-            this.btnConcatStrings.Location = new System.Drawing.Point(809, 37);
-            this.btnConcatStrings.Name = "btnConcatStrings";
-            this.btnConcatStrings.Size = new System.Drawing.Size(98, 23);
-            this.btnConcatStrings.TabIndex = 7;
-            this.btnConcatStrings.Text = "Concatenate";
-            this.btnConcatStrings.UseVisualStyleBackColor = true;
-            this.btnConcatStrings.Click += new System.EventHandler(this.btnConcatStrings_Click);
             // 
             // panel4
             // 
@@ -357,6 +366,75 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "C# Strings (Interpolation)";
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnGetLastName);
+            this.panel6.Controls.Add(this.tbLastName);
+            this.panel6.Controls.Add(this.tbFullName);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 262);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1148, 160);
+            this.panel6.TabIndex = 6;
+            // 
+            // tbLastName
+            // 
+            this.tbLastName.Enabled = false;
+            this.tbLastName.Location = new System.Drawing.Point(228, 38);
+            this.tbLastName.Name = "tbLastName";
+            this.tbLastName.Size = new System.Drawing.Size(100, 20);
+            this.tbLastName.TabIndex = 4;
+            // 
+            // tbFullName
+            // 
+            this.tbFullName.Location = new System.Drawing.Point(64, 38);
+            this.tbFullName.Name = "tbFullName";
+            this.tbFullName.Size = new System.Drawing.Size(158, 20);
+            this.tbFullName.TabIndex = 3;
+            this.tbFullName.Text = "John Doe";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(4, 41);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Full Name";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1148, 32);
+            this.panel7.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(12, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(156, 20);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "C# Access Strings";
+            // 
+            // btnGetLastName
+            // 
+            this.btnGetLastName.Location = new System.Drawing.Point(334, 38);
+            this.btnGetLastName.Name = "btnGetLastName";
+            this.btnGetLastName.Size = new System.Drawing.Size(99, 23);
+            this.btnGetLastName.TabIndex = 5;
+            this.btnGetLastName.Text = "Execute";
+            this.btnGetLastName.UseVisualStyleBackColor = true;
+            this.btnGetLastName.Click += new System.EventHandler(this.btnGetLastName_Click);
+            // 
             // FrmStrings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +442,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1148, 787);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -382,6 +461,10 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -418,5 +501,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbLastName;
+        private System.Windows.Forms.TextBox tbFullName;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnGetLastName;
     }
 }

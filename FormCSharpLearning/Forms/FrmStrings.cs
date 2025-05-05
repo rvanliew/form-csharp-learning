@@ -1,20 +1,23 @@
-﻿using System;
+﻿using FormCSharpLearning.Strings;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FormCSharpLearning.Forms
 {
     public partial class FrmStrings : Form
     {
+        private List<DataModel> _csvData = new List<DataModel>();
+
         public FrmStrings()
         {
             InitializeComponent();
+            _csvData = StringValidation.GetCustomerDataFromCsvFile();
+
+            Random random = new Random();
+            int randomIndex = random.Next(1, 500);
+
+            tbFullName.Text = $"{_csvData[randomIndex].FirstName} {_csvData[randomIndex].LastName}";
         }
 
         private void btnDisplayString_Click(object sender, EventArgs e)
@@ -63,6 +66,16 @@ namespace FormCSharpLearning.Forms
                 $"Class Name: {className}, DateTime: {currentDate}, Player Name: {valueOne} {valueTwo}";
 
             tbInterpOutput.Text = interpolatedString;
+        }
+
+        private void btnGetLastName_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tbFullName.Text))
+            {
+                return;
+            }
+
+            tbLastName.Text = StringValidation.GetLastName(tbFullName.Text);
         }
     }
 }
