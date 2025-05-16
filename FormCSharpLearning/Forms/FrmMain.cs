@@ -8,6 +8,7 @@ namespace FormCSharpLearning
     {
         private FrmNumericals _frmNumericals;
         private FrmStrings _frmStrings;
+        private FrmCollections _frmCollections;
 
         public FrmMain()
         {
@@ -48,6 +49,21 @@ namespace FormCSharpLearning
         private void ClearMainPanel()
         {
             panelMain.Controls.Clear();
+        }
+
+        private void btnCollections_Click(object sender, EventArgs e)
+        {
+            _frmCollections = new FrmCollections()
+            {
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                TopMost = true
+            };
+
+            _frmCollections.FormBorderStyle = FormBorderStyle.None;
+            ClearMainPanel();
+            panelMain.Controls.Add(_frmCollections);
+            _frmCollections.Show();
         }
     }
 }

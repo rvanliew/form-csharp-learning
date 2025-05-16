@@ -34,6 +34,7 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.btnCollections = new System.Windows.Forms.Button();
             this.panelSidebar.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panelHeader.SuspendLayout();
@@ -42,6 +43,7 @@
             // panelSidebar
             // 
             this.panelSidebar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelSidebar.Controls.Add(this.btnCollections);
             this.panelSidebar.Controls.Add(this.btnStrings);
             this.panelSidebar.Controls.Add(this.btnNumbers);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -107,6 +109,20 @@
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "CurrentForm";
             // 
+            // btnCollections
+            // 
+            this.btnCollections.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCollections.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCollections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCollections.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCollections.Location = new System.Drawing.Point(0, 64);
+            this.btnCollections.Name = "btnCollections";
+            this.btnCollections.Size = new System.Drawing.Size(159, 32);
+            this.btnCollections.TabIndex = 2;
+            this.btnCollections.Text = "Collections";
+            this.btnCollections.UseVisualStyleBackColor = false;
+            this.btnCollections.Click += new System.EventHandler(this.btnCollections_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +148,7 @@
         private System.Windows.Forms.Button btnStrings;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.Button btnCollections;
     }
 }
 

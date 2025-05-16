@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FormCSharpLearning.Strings
 {
-    public class DataModel
+    public class CustomerDataModel
     {
         public string FirstName;
         public string LastName;

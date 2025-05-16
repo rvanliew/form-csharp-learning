@@ -59,12 +59,24 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnGetLastName = new System.Windows.Forms.Button();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbFullName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnGetLastName = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbCompanyName = new System.Windows.Forms.TextBox();
+            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbWebsite = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbEmailSuffix = new System.Windows.Forms.TextBox();
+            this.btnGetEmailSuffix = new System.Windows.Forms.Button();
+            this.btnGetPrefix = new System.Windows.Forms.Button();
+            this.tbEmailPrefix = new System.Windows.Forms.TextBox();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -368,6 +380,18 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btnGetPrefix);
+            this.panel6.Controls.Add(this.tbEmailPrefix);
+            this.panel6.Controls.Add(this.btnGetEmailSuffix);
+            this.panel6.Controls.Add(this.tbEmailSuffix);
+            this.panel6.Controls.Add(this.tbWebsite);
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Controls.Add(this.tbEmail);
+            this.panel6.Controls.Add(this.label14);
+            this.panel6.Controls.Add(this.tbAddress);
+            this.panel6.Controls.Add(this.label13);
+            this.panel6.Controls.Add(this.tbCompanyName);
+            this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.btnGetLastName);
             this.panel6.Controls.Add(this.tbLastName);
             this.panel6.Controls.Add(this.tbFullName);
@@ -376,29 +400,39 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 262);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1148, 160);
+            this.panel6.Size = new System.Drawing.Size(1148, 178);
             this.panel6.TabIndex = 6;
+            // 
+            // btnGetLastName
+            // 
+            this.btnGetLastName.Location = new System.Drawing.Point(336, 38);
+            this.btnGetLastName.Name = "btnGetLastName";
+            this.btnGetLastName.Size = new System.Drawing.Size(99, 23);
+            this.btnGetLastName.TabIndex = 5;
+            this.btnGetLastName.Text = "Get Last Name";
+            this.btnGetLastName.UseVisualStyleBackColor = true;
+            this.btnGetLastName.Click += new System.EventHandler(this.btnGetLastName_Click);
             // 
             // tbLastName
             // 
             this.tbLastName.Enabled = false;
-            this.tbLastName.Location = new System.Drawing.Point(228, 38);
+            this.tbLastName.Location = new System.Drawing.Point(230, 38);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(100, 20);
             this.tbLastName.TabIndex = 4;
             // 
             // tbFullName
             // 
-            this.tbFullName.Location = new System.Drawing.Point(64, 38);
+            this.tbFullName.Enabled = false;
+            this.tbFullName.Location = new System.Drawing.Point(66, 38);
             this.tbFullName.Name = "tbFullName";
             this.tbFullName.Size = new System.Drawing.Size(158, 20);
             this.tbFullName.TabIndex = 3;
-            this.tbFullName.Text = "John Doe";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 41);
+            this.label11.Location = new System.Drawing.Point(8, 41);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 13);
             this.label11.TabIndex = 2;
@@ -425,15 +459,109 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "C# Access Strings";
             // 
-            // btnGetLastName
+            // label12
             // 
-            this.btnGetLastName.Location = new System.Drawing.Point(334, 38);
-            this.btnGetLastName.Name = "btnGetLastName";
-            this.btnGetLastName.Size = new System.Drawing.Size(99, 23);
-            this.btnGetLastName.TabIndex = 5;
-            this.btnGetLastName.Text = "Execute";
-            this.btnGetLastName.UseVisualStyleBackColor = true;
-            this.btnGetLastName.Click += new System.EventHandler(this.btnGetLastName_Click);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 66);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Company";
+            // 
+            // tbCompanyName
+            // 
+            this.tbCompanyName.Enabled = false;
+            this.tbCompanyName.Location = new System.Drawing.Point(66, 66);
+            this.tbCompanyName.Name = "tbCompanyName";
+            this.tbCompanyName.Size = new System.Drawing.Size(158, 20);
+            this.tbCompanyName.TabIndex = 7;
+            // 
+            // tbAddress
+            // 
+            this.tbAddress.Enabled = false;
+            this.tbAddress.Location = new System.Drawing.Point(66, 92);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(369, 20);
+            this.tbAddress.TabIndex = 9;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 92);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Address";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Enabled = false;
+            this.tbEmail.Location = new System.Drawing.Point(66, 118);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(158, 20);
+            this.tbEmail.TabIndex = 11;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 121);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Email";
+            // 
+            // tbWebsite
+            // 
+            this.tbWebsite.Enabled = false;
+            this.tbWebsite.Location = new System.Drawing.Point(66, 144);
+            this.tbWebsite.Name = "tbWebsite";
+            this.tbWebsite.Size = new System.Drawing.Size(158, 20);
+            this.tbWebsite.TabIndex = 13;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 144);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 13);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "Website";
+            // 
+            // tbEmailSuffix
+            // 
+            this.tbEmailSuffix.Enabled = false;
+            this.tbEmailSuffix.Location = new System.Drawing.Point(230, 118);
+            this.tbEmailSuffix.Name = "tbEmailSuffix";
+            this.tbEmailSuffix.Size = new System.Drawing.Size(158, 20);
+            this.tbEmailSuffix.TabIndex = 14;
+            // 
+            // btnGetEmailSuffix
+            // 
+            this.btnGetEmailSuffix.Location = new System.Drawing.Point(394, 118);
+            this.btnGetEmailSuffix.Name = "btnGetEmailSuffix";
+            this.btnGetEmailSuffix.Size = new System.Drawing.Size(104, 23);
+            this.btnGetEmailSuffix.TabIndex = 15;
+            this.btnGetEmailSuffix.Text = "Get Email Suffix";
+            this.btnGetEmailSuffix.UseVisualStyleBackColor = true;
+            this.btnGetEmailSuffix.Click += new System.EventHandler(this.btnGetEmailSuffix_Click);
+            // 
+            // btnGetPrefix
+            // 
+            this.btnGetPrefix.Location = new System.Drawing.Point(668, 118);
+            this.btnGetPrefix.Name = "btnGetPrefix";
+            this.btnGetPrefix.Size = new System.Drawing.Size(104, 23);
+            this.btnGetPrefix.TabIndex = 17;
+            this.btnGetPrefix.Text = "Get Email Prefix";
+            this.btnGetPrefix.UseVisualStyleBackColor = true;
+            this.btnGetPrefix.Click += new System.EventHandler(this.btnGetPrefix_Click);
+            // 
+            // tbEmailPrefix
+            // 
+            this.tbEmailPrefix.Enabled = false;
+            this.tbEmailPrefix.Location = new System.Drawing.Point(504, 118);
+            this.tbEmailPrefix.Name = "tbEmailPrefix";
+            this.tbEmailPrefix.Size = new System.Drawing.Size(158, 20);
+            this.tbEmailPrefix.TabIndex = 16;
             // 
             // FrmStrings
             // 
@@ -508,5 +636,17 @@
         private System.Windows.Forms.TextBox tbFullName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnGetLastName;
+        private System.Windows.Forms.TextBox tbWebsite;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbCompanyName;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnGetEmailSuffix;
+        private System.Windows.Forms.TextBox tbEmailSuffix;
+        private System.Windows.Forms.Button btnGetPrefix;
+        private System.Windows.Forms.TextBox tbEmailPrefix;
     }
 }

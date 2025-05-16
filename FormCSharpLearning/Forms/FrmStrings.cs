@@ -7,17 +7,27 @@ namespace FormCSharpLearning.Forms
 {
     public partial class FrmStrings : Form
     {
-        private List<DataModel> _csvData = new List<DataModel>();
+        private List<CustomerDataModel> _csvData = new List<CustomerDataModel>();
 
         public FrmStrings()
         {
             InitializeComponent();
             _csvData = StringValidation.GetCustomerDataFromCsvFile();
 
+            if (_csvData == null)
+            {
+                return;
+            }
+
             Random random = new Random();
             int randomIndex = random.Next(1, 500);
 
             tbFullName.Text = $"{_csvData[randomIndex].FirstName} {_csvData[randomIndex].LastName}";
+            tbCompanyName.Text = $"{_csvData[randomIndex].CompanyName}";
+            tbAddress.Text = $"{_csvData[randomIndex].Address} {_csvData[randomIndex].City}, {_csvData[randomIndex].State} " +
+                $"{_csvData[randomIndex].Zip}";
+            tbEmail.Text = $"{_csvData[randomIndex].Email}";
+            tbWebsite.Text = $"{_csvData[randomIndex].Website}";
         }
 
         private void btnDisplayString_Click(object sender, EventArgs e)
@@ -76,6 +86,28 @@ namespace FormCSharpLearning.Forms
             }
 
             tbLastName.Text = StringValidation.GetLastName(tbFullName.Text);
+        }
+
+        private void btnGetEmailSuffix_Click(object sender, EventArgs e)
+        {
+            // check do we have an email address? No, then get out
+            if(string.IsNullOrWhiteSpace(tbEmail.Text))
+            {
+                return;
+            }
+
+            //continue with code if we have an email
+            tbEmailSuffix.Text = StringValidation.GetEmailSuffix(tbEmail.Text);
+        }
+
+        private void btnGetPrefix_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrWhiteSpace(tbEmail.Text))
+            {
+                return;
+            }
+
+            tbEmailPrefix.Text = StringValidation.GetEmailPrefix(tbEmail.Text);
         }
     }
 }
